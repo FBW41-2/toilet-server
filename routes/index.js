@@ -22,7 +22,17 @@ router.get('/new', function(req, res, next) {
 /* POST toilet data */
 router.post('/add', function(req, res, next) {
   const toilet = {
-    city: req.body.city
+    city: req.body.city,
+    street: req.body.street,
+    streetnr: req.body.streetnr,
+    name: req.body.name,
+    'feat-mirror': req.body['feat-mirror'],
+    'feat-papertowels': req.body['feat-papertowels'],
+    'feat-perfume': req.body['feat-perfume'],
+    'feat-access': req.body['feat-access'],
+    'feat-soap': req.body['feat-soap'],
+    stalls: req.body.stalls,
+    rating: req.body.rating
   }
 
   db.get('toilets')
