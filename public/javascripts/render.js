@@ -11,7 +11,14 @@ async function getToilets() {
                 'toilet<-': {
                     '.city': 'toilet.city',
                     '.location': 'toilet.name',
-                    '.address': a => `${a.item.street} ${a.item.streetnr}`
+                    '.address': a => `${a.item.street} ${a.item.streetnr}, ${a.item.zip} ${a.item.city}`,
+                    '.feat-mirror': 'toilet.feat-mirror',
+                    '.feat-papertowels': 'toilet.feat-papertowels',
+                    '.feat-perfume': 'toilet.feat-perfume',
+                    '.feat-access': 'toilet.feat-access',
+                    '.feat-soap': 'toilet.feat-soap',
+                    '.stalls': 'toilet.stalls',
+                    '.rating': 'toilet.rating',
                 }
             }
             
