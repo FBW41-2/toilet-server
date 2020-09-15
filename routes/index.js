@@ -28,6 +28,7 @@ router.get('/new', function(req, res, next) {
 router.post('/add', function(req, res, next) {
   const toilet = {
     city: req.body.city,
+    zip: req.body.zip,
     street: req.body.street,
     streetnr: req.body.streetnr,
     name: req.body.name,
