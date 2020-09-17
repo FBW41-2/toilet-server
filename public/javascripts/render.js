@@ -17,6 +17,7 @@ async function getToilets() {
                     '.feat-perfume': 'toilet.feat-perfume',
                     '.feat-access': 'toilet.feat-access',
                     '.feat-soap': 'toilet.feat-soap',
+                    '.feat-baby': 'toilet.feat-baby',
                     '.stalls': 'toilet.stalls',
                     '.rating': 'toilet.rating',
                 }

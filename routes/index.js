@@ -37,6 +37,7 @@ router.post('/add', function(req, res, next) {
     'feat-perfume': req.body['feat-perfume'],
     'feat-access': req.body['feat-access'],
     'feat-soap': req.body['feat-soap'],
+    'feat-baby': req.body['feat-baby'],
     stalls: req.body.stalls,
     rating: req.body.rating
   }
