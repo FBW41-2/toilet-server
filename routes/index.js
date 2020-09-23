@@ -49,7 +49,7 @@ router.post('/add', function(req, res, next) {
   const all = db.get('posts')
   .find()
   .value()
-  res.redirect('https://need2pee.de/table.html');
+  res.redirect('https://need2pee.de');
 });
 
 /* GET all */
