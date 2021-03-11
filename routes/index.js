@@ -6,6 +6,14 @@ const FileSync = require('lowdb/adapters/FileSync')
 const adapter = new FileSync('db.json')
 const db = low(adapter)
 
+const users = [{
+  name: "Maxim",
+  password: "1234"
+},{
+  name: "Flo",
+  password: "1234"
+}]
+
 db.defaults({ toilets: [] })
   .write()
 
@@ -59,5 +67,17 @@ router.get('/all', function(req, res, next) {
   console.log(db.get('toilets').value())
   res.json(all)
 });
+
+/* POST Login test */
+router.post('/login', (req, res) => {
+  // find user
+  const user = users.find(item => item.name == req.body.user)
+  console.log("user", user)
+  if(user && user.password === req.body.password){
+    res.json({status: "success", name: user.name})
+  } else {
+    res.json({status: "error", message: "Wrong username or password"})
+  }
+})
 
 module.exports = router;
